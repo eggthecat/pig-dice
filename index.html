@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Righteous" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Rolling Rolling </title>
+  </head>
+  <body>
+      <!-- Page Title -->
+      <h1>Pig Dice Game</h1>
+      <hr>
+
+      <!-- Instructions -->
+      <h2>Instructions</h2>
+      <p><strong>Goal</strong>: Be the first to 100 points.</p>
+      <p><strong>Actions</strong>:</p>
+      <ul>
+          <li><strong>ROLL</strong>: Add roll number to current turn points. Roll of "1" ends turn and forfeits turn points.</li>
+          <li><strong>HOLD</strong>: Ends turn and adds turn points to total game points.</li>
+      </ul>
+
+      <!-- Players Area -->
+      <div class="players-row">
+          <!-- Player 1 -->
+          <div class="player-area">
+            <hr>
+              <div id="p1-header" class="active">
+                  Player 1 - Total Points: <span id="p1-points">100</span>
+              </div>
+              <div>
+                  <p>Turn Points: <span id="p1-turn-points">0</span></p>
+                  <p><img id="p1-roll-img" src="img/dice3.png"></p>
+                  <p><button id="p1-roll">Roll</button> <button id="p1-hold">Hold</button></p>
+              </div>
+              <hr>
+          </div>
+
+          <!-- Player 2  -->
+          <div class="player-area">
+              <div id="p2-header">
+                  Player 2 - Total Points: <span id="p2-points">100</span>
+              </div>
+              <div>
+                  <p>Turn Points: <span id="p2-turn-points">0</span></p>
+                  <p><img src="img/dice5.png"></p>
+                  <p><button id="p2-roll, btn1-click" disabled>Roll</button> <button id="p2-hold" disabled>Hold</button></p>
+              </div>
+          </div>
+      </div>
+  </body>
+</html>
