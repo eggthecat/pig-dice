@@ -2,10 +2,19 @@
 // function roll(min, max) {
 //   return Math.random() * (max - min) + min;
 // }
-function rollDice(){
-  return Math.floor(Math.random() * 6) + 1;
-  document.getElementById("p1-roll-img").src = "img/dice" + rollDice() + ".png";
+var player1 = {
+  totalPts: 0,
+  turnPts: 0
 }
+
+function rollDice() {
+  let rollNum = Math.floor(Math.random() * 6) + 1;
+  if (rollNum != 1) {
+    player1.turnPts += rollNum;
+    document.getElementById("p1-turn-points").innerHtml = player1.turnPts;
+  }
+}
+
 
 function EventListeners() {
   $("#p1-roll").on("click", function() {
